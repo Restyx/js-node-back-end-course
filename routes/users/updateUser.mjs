@@ -27,7 +27,7 @@ export default (req, res) => {
       }
     }
 
-    await updateUser(id, updatedData);
+    const result = await updateUser(id, updatedData);
     if (result) {
       res.writeHead(200);
       res.end(JSON.stringify({ message: "update successful" }));
