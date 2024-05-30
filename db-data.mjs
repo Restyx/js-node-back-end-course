@@ -17,7 +17,7 @@ export async function createUser(user) {
   };
 
   const result = await pool.query(query);
-  return result.rowCount;
+  return result.rowCount > 0;
 }
 
 export async function getUserById(userId) {
@@ -43,7 +43,7 @@ export async function updateUser(userId, updatedData) {
   };
 
   const result = await pool.query(query);
-  return result.rowCount;
+  return result.rowCount > 0;
 }
 
 export async function deleteUser(userId) {
@@ -54,5 +54,5 @@ export async function deleteUser(userId) {
   };
 
   const result = await pool.query(query);
-  return result.rowCount;
+  return result.rowCount > 0;
 }
