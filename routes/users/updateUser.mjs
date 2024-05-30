@@ -8,7 +8,7 @@ export default (req, res) => {
     body += buffer.toString();
   });
 
-  req.on("end", () => {
+  req.on("end", async () => {
     const parsedBody = JSON.parse(body);
     const updatedData = {};
 
@@ -27,14 +27,13 @@ export default (req, res) => {
       }
     }
 
-    updateUser(id, updatedData).then((result) => {
-      if (result) {
-        res.writeHead(200);
-        res.end(JSON.stringify({message: 'update successful'}));
-      } else {
-        res.writeHead(404);
-        res.end(JSON.stringify({ message: "User not found" }));
-      }
-    });
+    await updateUser(id, updatedData);
+    if (result) {
+      res.writeHead(200);
+      res.end(JSON.stringify({ message: "update successful" }));
+    } else {
+      res.writeHead(404);
+      res.end(JSON.stringify({ message: "User not found" }));
+    }
   });
 };
