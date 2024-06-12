@@ -1,5 +1,5 @@
 {
-  "name": "express-users-crud-api",
+  "name": "users-crud-api",
   "version": "1.0.0",
   "private": true,
   "scripts": {
