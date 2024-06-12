@@ -1,5 +1,5 @@
 {
-  "name": "crud-users-server",
+  "name": "users-crud-api",
   "version": "1.0.0",
   "description": "Simple Node.js server for managing basic user data in PostgreSQL",
   "main": "./src/server.mjs",
