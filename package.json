@@ -2,10 +2,10 @@
   "name": "crud-users-server",
   "version": "1.0.0",
   "description": "Simple Node.js server for managing basic user data in PostgreSQL",
-  "main": "server.mjs",
+  "main": "./src/server.mjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.mjs"
+    "start": "node ./src/server.mjs"
   },
   "keywords": [
     "CRUD",

@@ -1,4 +1,4 @@
-import { pool } from "./db-connection.mjs";
+import { pool } from "./database/db-connection.mjs";
 
 export async function getUsers() {
   const query = {
